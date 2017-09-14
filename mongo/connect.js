@@ -8,8 +8,18 @@ MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected successfully to Mongo DB");
 
-  crud.oi('olaaar')
+  // crud.insertOneDoc(db , {
+  //   nome:"Ramon",
+  //   niver:'1994-05-17',
+  //   supino:'30kg'
+  // }, 'wofe12');
 
-  crud.insertOneDoc(db, 'x', 'wofe12');
-  db.close();
+  crud.updateOneDoc(db, {
+    nome:"Ramonzits",
+    niver:"XINDEIRU",
+    supino:'30kg dnovo :(',
+    _id: '59ba838f998ae1244c07e016'
+  }, 'wofe12')
+
+  // crud.findOne(db,'59ba85db549f96115c7424b6' , 'wofe12')
 });
