@@ -1,6 +1,6 @@
 <%include ../partials/head%>
 
-<nav class='nav-top-ui azul-2 '>
+<nav class='nav-top-ui azul-3 '>
   <div class="logo">
 
   </div>
@@ -10,33 +10,81 @@
 </nav>
 
 <div class="">
+
   <div class="land">
-    <div class="sw flex fl-center">
-      <h1>login</h1>
-    </div>
+
+      <div class=''>
+        <h1>Anote.me</h1>
+        <p>A aplicação web que veio para simplificar suas anotações.</p>
+
+      </div>
+      <div class="">
+        <form class="form-login login-dense azul-3 shadow-z3" action="/app" method="post">
+          <h1>Log-in.</h1>
+          <input type="text" placeholder="Usuario" >
+          <input type="password" placeholder="Senha" >
+          <input type="submit" value="Entrar !" >
+        </form>
+      </div>
   </div>
 
   <section  id='sobre'>
     <div class='sw'>
-      <h1>o anote</h1>
-      <p>sobre o produto</p>
+      <h1>O anote</h1>
+      <p>O <span class='anote'>anote.me</span> veio para solucionar seus problemas ao anotarem
+         todo tipo de coisa, nosso aplicativo é feito para ser simples e confiavel.</p>
+      <p>Neste mundo onde os smartphones dominaram, todos nós sabemos que espaço é algo escasso,
+         tendo isto em vista, o <span class='anote'>anote.me</span> é suuper leve e pequeno.</p>
+
     </div>
   </section>
 
-  <section id=''>
-    <div class='sw sm-column md-row'>
-      <img src="" alt="minhafoto">
-      <div class="">
-      <h1>ramon</h1>
-      <p>sobre min</p>
+  <section id='features'>
+
+    <div class='features sw'>
+      <img src="/images/icons/app.png" class="featureIcon" alt='featureIcon'>
+      <div class="featureInfo">
+        <h1>Leve</h1>
+        <p>Você não precisa baixar a aplicação para utiliza-la</p>
+        <p>Mas, caso queira, é extremamente leve!</p>
+      </div>
     </div>
+
+    <div class='features sw'>
+      <div class="featureInfo">
+        <h1>Rapida!</h1>
+        <p>Grande parte da aplicação é processada no nosso servidor, assim deixando mais leve para você!</p>
+      </div>
+      <img src="/images/icons/timer.png" class="featureIcon" alt='featureIcon'>
     </div>
+
+    <div class='features sw'>
+      <img src="/images/icons/cloud.png" class="featureIcon" alt='featureIcon'>
+      <div class="featureInfo">
+        <h1>Na nuvem!!</h1>
+        <p>Você não precisa 'salvar' nada.</p>
+        <p>Assim que terminar a edição da nota, ja estará salva na nuvem!</p>
+      </div>
+    </div>
+
+    <div class='features sw'>
+      <div class="featureInfo">
+        <h1>Multi-Acessivel!</h1>
+        <p>A aplicação pode ser acessada por qualquer despositivo que tenha conecção a internet</p>
+        <p>Precisando apenas de um browser.</p>
+      </div>
+      <img src="/images/icons/phonelink.png" class="featureIcon" alt='featureIcon'>
+    </div>
+
   </section>
 
-  <section>
+  <section id='base'>
     <div class='sw'>
-      <h1>contato</h1>
-      <p>form de contato</p>
+      <h1>Base instalada</h1>
+      <p>no. de usuarios utilizando </p>
+      <p>no. de cadernos utilizando </p>
+      <p>no. de anotacoes utilizando </p>
+      <p>no. de cafés tomados </p>
     </div>
   </section>
 </div>

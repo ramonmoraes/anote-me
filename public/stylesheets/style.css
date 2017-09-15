@@ -4,18 +4,24 @@ margin: 0;
 font-family: 'Lato'
 }
 
-.azul-1{
+.azul-1 {
 background-color: #5b6e96;
 }
-.azul-2{
+.azul-2 {
   background-color: #385aa3;
   color: #eee;
 }
-.azul-3{
+.azul-3 {
   background-color: #28479c;
+  color: #eee;
 }
-.azul-4{
+.azul-4 {
   background-color: #263183;
+}
+
+.azul-5 {
+  background-color: #0c276f;
+  color: #ddd;
 }
 
 body{
@@ -23,12 +29,31 @@ body{
 }
 
 .land{
-  background-image: url("../images/land.jpeg");
-  background-size: cover;
-  height: 60vw;
-  max-height: 100vh;
-
+  display: flex;
+  flex-direction: row;
+  min-height: 50vh;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('/images/notebook2.png');
+  font-size: 1.15em;
 }
+.land p,h1 {
+  max-width: 90%;
+  text-align: center;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.land p {
+  border-bottom: 1px solid #0c276f;
+}
+
+@media screen and (max-width:576px){
+  .land{
+    flex-direction: column-reverse;
+  }
+}
+
 .sw{
   padding: 10px;
   max-width: 800px;
@@ -36,7 +61,7 @@ body{
 }
 section{
   padding: 15px 0;
-  height: 300px;
+  min-height: 300px;
 }
 section:nth-child(even){
   background-color: #5b6e96;
@@ -51,4 +76,63 @@ footer{
   height: 300px;
   background-color: #444;
   color: #bbb;
+}
+#features{
+  /*background-image: url('/images/notebook3.png');*/
+  background-color: #ededed
+}
+.features{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.featureIcon{
+  height: 56px;
+  margin: auto;
+}
+.featureInfo{
+  max-width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+  .features{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .features:nth-child(even){
+    flex-direction: column-reverse;
+  }
+  .featureInfo{
+    max-width: 95%;
+  }
+  .featureInfo h1{
+    text-align: center;
+  }
+}
+.footer{
+  display: flex;
+  justify-content: space-around;
+}
+.footerDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footerDiv a{
+  text-decoration: none;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 576px) {
+  .footer{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerDiv{
+    padding: 15px;
+  }
+
 }
