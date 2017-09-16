@@ -1,3 +1,7 @@
+body{
+  background-color: #ededed;
+}
+
 .App {
   text-align: center;
 }
@@ -18,7 +22,149 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.containerFlex{
+  display: flex;
+  padding: 15px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.roof{
+  height: 25px;
+  width: 100%;
+  background-color: #28479c
+}
+.book{
+    background-color:white;
+    box-shadow:0px 1px 3px -1px #444;
+    min-width: 125px;
+    width: 45%;
+    max-width:150px;
+    height:300px;
+    margin:5px;
+    cursor:pointer;
+    color:#333;
+}
+
+.nav-top-ui {
+  /*Up to 5 buttons*/
+  position: sticky;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  height: 56px;
+  box-shadow: 0px 1px 3px 0px #333;
+  z-index: 1000;
+}
+.nav-top-ui .logo {
+  margin-left: 10vw;
+  max-height: 56px;
+}
+.nav-top-ui .logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.nav-top-ui .btn-wrapper {
+  margin-right: 10vw;
+  display: flex;
+}
+.nav-top-ui a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+.nav-top-ui .btn {
+  min-width: 45px;
+  width: auto;
+  max-width: 100px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .nav-top-ui {
+    justify-content: center;
+  }
+  .nav-top-ui .logo {
+    display: none;
+  }
+  .nav-top-ui .btn-wrapper {
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .nav-top-ui .btn {
+    /*width: 30%;*/
+    /*max-width: 30%;*/
+  }
+}
+
+.singleBtn{
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 7px -1px #555;
+  position: absolute;
+  bottom: 5vh;
+  right: 10vw;
+  }
+.singleBtn p{
+  margin: 0;
+}
+
+.reactLogin{
+  width: 80vw;
+  height: 70vh;
+  max-width: 500px;
+  max-height: 700px;
+  margin: 10vh auto;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0px 3px 4px -1px #333;
+}
+.loginButtons{
+  width: auto;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginButtons .btn{
+  width: 150px;
+  min-height: 40px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.loginButtons h1{
+  margin-top: 0;
+  width: 80%;
+  text-align: center;
+  color: #444;
+}
+.red span{
+  color: tomato;
+}
+.blue span{
+  color: #28479c;
+}
+.disclaimer{
+  width: 80%;
+  text-align: center;
+  color: #777;
 }

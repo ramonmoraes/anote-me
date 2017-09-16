@@ -1,20 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LogInContainer from './containers/LogInContainer';
+import UserContainer from './containers/UserContainer';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      logged:false,
+      user_id:'',
+      token:''
+    }
+  }
+
+  login =(user)=> {
+    this.setState({
+      logged:true,
+      user_id:user.id,
+      token:user.token
+    })
+  }
+
+  logout =()=> {
+    this.setState({
+      logged:false,
+      user_id:'no_user',
+      token:"no_token"
+    })
+  }
+
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+    if(this.state.logged===false){
+      return (
+          <LogInContainer login={this.login}/>
+      );
+    }else{
+      return(
+        <UserContainer user={this.state.user_id} logout={this.logout}/>
+      );
+    }
+
   }
 }
 

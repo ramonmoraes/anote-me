@@ -87,12 +87,16 @@ footer{
   justify-content: space-around;
   margin-top: 20px;
 }
+.features p{
+  text-align: center;
+  font-size: 1.12em;
+}
 .featureIcon{
   height: 56px;
   margin: auto;
 }
 .featureInfo{
-  max-width: 50%;
+  width: 50%;
 }
 
 @media screen and (max-width: 576px) {
@@ -134,5 +138,8 @@ footer{
   .footerDiv{
     padding: 15px;
   }
-
+}
+.oauthLogin{
+  padding: 5px;
+  margin: 10px auto;
 }
