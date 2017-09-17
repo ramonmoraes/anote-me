@@ -16,11 +16,11 @@ class NavTop extends Component {
   render() {
     return (
       <nav className='nav-top-ui' style={styleMenu} >
-        <div>
+        <div className='logo'>
           <h1> Anote-me </h1>
         </div>
         <div className='btn-wrapper'>
-          <div className='btn' style={styleBtn} onClick={this.props.logOut}>Sair</div>
+          <div className='btn' style={styleBtn} onClick={this.props.logout}>Sair</div>
         </div>
       </nav>
     );

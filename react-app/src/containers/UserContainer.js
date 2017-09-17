@@ -8,7 +8,7 @@ class UserContainer extends Component {
   render() {
   return (
     <div className="App">
-      <NavTopContainer/>
+      <NavTopContainer logout={this.props.logout}/>
       <BookContainer/>
       <SingleBtnContainer/>
     </div>

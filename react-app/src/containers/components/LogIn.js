@@ -10,7 +10,7 @@ render() {
         <button className='btn red' onClick={this.props.loginGoogle}> Log-in com <span>Google</span> </button>
         <button className='btn blue' onClick={this.props.loginFacebook}> Log-in com <span>Facebook</span> </button>
         <p className='disclaimer'>
-          *Suas informações com as respecitivas empresas estão seguras.
+          *Suas informações com as respectivas empresas estão seguras.
         </p>
       </div>
       </div>

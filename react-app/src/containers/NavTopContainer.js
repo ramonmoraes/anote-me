@@ -3,13 +3,13 @@ import NavTop from './components/NavTop';
 
 class NavTopContainer extends Component {
 
-  logOut =()=> {
-    this.props.logOut()
+  logout =()=> {
+    this.props.logout()
   }
 
   render() {
   return (
-      <NavTop logOut={this.logOut} />
+      <NavTop logout={this.logout} />
     );
   }
 }
