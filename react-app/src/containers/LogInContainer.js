@@ -32,6 +32,7 @@ class LogInContainer extends Component {
     });
 
   }
+
   logoutFacebook(){
     FB.logout();
   }
@@ -41,6 +42,7 @@ class LogInContainer extends Component {
   }
 
   facebookSetup(){
+
     window.fbAsyncInit = function() {
       FB.init({
         appId      : 1504295126295234,
@@ -58,6 +60,7 @@ class LogInContainer extends Component {
       js.src = "//connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
   }
 
   render() {

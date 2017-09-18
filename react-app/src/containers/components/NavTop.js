@@ -12,7 +12,9 @@ var styleBtn ={
   "backgroundColor":"#ededed",
   "color":"#000"
 }
+
 class NavTop extends Component {
+
   render() {
     return (
       <nav className='nav-top-ui' style={styleMenu} >
@@ -24,7 +26,9 @@ class NavTop extends Component {
         </div>
       </nav>
     );
+
   }
+  
 }
 
 export default NavTop;

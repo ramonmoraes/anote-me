@@ -4,7 +4,7 @@ import '../../App.css';
 class SingleBtn extends Component {
 render() {
     return (
-      <div className='singleBtn' onClick={this.props.createOne}>
+      <div className='singleBtn' onClick={this.props.onclick}>
         <p> Criar </p>
       </div>
     );

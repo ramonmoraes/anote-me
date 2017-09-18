@@ -4,15 +4,17 @@ import '../../App.css';
 class Page extends Component {
   constructor(props){
     super(props);
+
     this.state = {
       roof:this.props.roof,
       title:this.props.title,
       id:this.props.id,
       content:this.props.content
     }
+
   }
 
-  styleRoof=()=>{
+  styleRoof =()=> {
     return ({
       "backgroundColor":this.state.roof
     })
@@ -21,9 +23,11 @@ class Page extends Component {
   editPages =()=> {
     console.log('Editar page com id no. :' +this.props.id);
     console.log('pop-up do editor com as infos');
+    console.log(this.state);
   }
 
   render() {
+
     return (
       <div className="book" onClick={this.editPage}>
         <div className='roof' style={this.styleRoof()}>
@@ -32,6 +36,7 @@ class Page extends Component {
       </div>
     );
   }
+  
 }
 
 export default Page;

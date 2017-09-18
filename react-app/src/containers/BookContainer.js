@@ -6,8 +6,9 @@ import '../App.css';
 
 
 class BookContainer extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
+
     this.state={
       books:[{
         title:'title',
@@ -22,10 +23,16 @@ class BookContainer extends Component {
       janela:'books',
       book_id:''
     }
+
   }
 
-  componentDidMount(){
+  componentDidMount() {
     //fetchbooks @app/users/caderno
+    console.log('fecth infos book container');
+  }
+
+  createOne =()=> {
+    console.log('craete new book refering the user id: '+this.props.user_id);
   }
 
   getPages =(id)=> {
@@ -42,19 +49,24 @@ class BookContainer extends Component {
     this.state.books.map( (info)=>{
       listOfBooks.push( <Book title={info.title} roof={info.roof} id={info.id} getPages={this.getPages} key={i}/> );
       i++;
+      return 'plus1';
     });
 
     if(this.state.janela==='books'){
+
       return (
         <div className="containerFlex">
           {listOfBooks}
-          <SingleBtnContainer/>
+          <SingleBtnContainer onclick={this.createOne}/>
         </div>
       );
-    }else{
+
+    } else {
+
       return(
         <PageContainer id={this.state.book_id}/>
       );
+
     }
   }
 }

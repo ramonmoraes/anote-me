@@ -4,16 +4,20 @@ import SingleBtn from './components/SingleBtn'
 class SingleBtnContainer extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       janela:""
     }
+
   }
-  createOne(){
+
+  createOne =()=> {
     this.props.onclick();
   }
+
   render() {
     return (
-      <SingleBtn onClick={this.createOne}/>
+      <SingleBtn onclick={this.createOne}/>
     );
   }
 }

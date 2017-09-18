@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      logged:false,
+      logged:true, // True to test
       user_id:'',
       user_token:''
     }
@@ -37,7 +37,7 @@ class App extends Component {
         );
     }else{
       return(
-          <UserContainer user={this.state.user_id} token={this.state.user_token} logout={this.logout}/>
+          <UserContainer id={this.state.user_id} token={this.state.user_token} logout={this.logout}/>
       );
     }
 
