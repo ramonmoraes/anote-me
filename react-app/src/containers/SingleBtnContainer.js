@@ -8,12 +8,12 @@ class SingleBtnContainer extends Component {
       janela:""
     }
   }
-  createOne =()=>{
-    console.log('createOne');
+  createOne(){
+    this.props.onclick();
   }
   render() {
     return (
-      <SingleBtn createOne={this.createOne} />
+      <SingleBtn onClick={this.createOne}/>
     );
   }
 }

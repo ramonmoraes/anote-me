@@ -14,10 +14,13 @@ class LogInContainer extends Component {
     let Login = this.props.login;
 
     let loginPromise = new Promise(function(resolve, reject) {
-      FB.login();
-      FB.getLoginStatus(function(response) {
-          resolve(response);
+      FB.login(function(res){
+        resolve(res)
       });
+      // FB.getLoginStatus(function(response) {
+      //     console.log(response);
+      //     resolve(response);
+      // });
     });
 
     loginPromise.then(function(res){
@@ -30,7 +33,6 @@ class LogInContainer extends Component {
 
   }
   logoutFacebook(){
-    console.log('oi');
     FB.logout();
   }
 

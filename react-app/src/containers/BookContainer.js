@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SingleBtnContainer from './SingleBtnContainer';
+import PageContainer from './PageContainer';
 import Book from './components/Book';
 import '../App.css';
 
@@ -10,20 +12,50 @@ class BookContainer extends Component {
       books:[{
         title:'title',
         roof:'roof',
-        id:"id"
-      }]
+        id:"1"
+      },
+      {
+        title:'titulo diaaaabo',
+        roof:'roof',
+        id:"53084"
+      }],
+      janela:'books',
+      book_id:''
     }
   }
-  getPages=()=>{
-    console.log('get pages');
+
+  componentDidMount(){
+    //fetchbooks @app/users/caderno
   }
+
+  getPages =(id)=> {
+    console.log("id do book : "+ id);
+    this.setState({
+      janela:'page',
+      book_id:id
+    });
+  }
+
   render() {
-    return (
-      <div className="containerFlex">
-        <Book title='Ramon' roof='' getPages={this.getPages} />
-        <Book title='Wofe' roof='tomato' getPages={this.getPages}/>
+    let listOfBooks = [];
+    let i=0;
+    this.state.books.map( (info)=>{
+      listOfBooks.push( <Book title={info.title} roof={info.roof} id={info.id} getPages={this.getPages} key={i}/> );
+      i++;
+    });
+
+    if(this.state.janela==='books'){
+      return (
+        <div className="containerFlex">
+          {listOfBooks}
+          <SingleBtnContainer/>
         </div>
-    );
+      );
+    }else{
+      return(
+        <PageContainer id={this.state.book_id}/>
+      );
+    }
   }
 }
 

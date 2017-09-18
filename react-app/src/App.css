@@ -122,6 +122,7 @@ body{
   position: absolute;
   bottom: 5vh;
   right: 10vw;
+  cursor: pointer;
   }
 .singleBtn p{
   margin: 0;

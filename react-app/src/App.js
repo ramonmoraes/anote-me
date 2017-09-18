@@ -3,7 +3,6 @@ import './App.css';
 import LogInContainer from './containers/LogInContainer';
 import UserContainer from './containers/UserContainer';
 
-import FB from './containers/LogInContainer';
 
 class App extends Component {
   constructor(props){
@@ -21,11 +20,9 @@ class App extends Component {
       user_id:user.id,
       user_token:user.token
     });
-    // console.log(user);
   }
 
   logout =()=> {
-    LogInContainer.logoutFacebook;
     this.setState({
       logged:false,
       user_id:'no_user',
