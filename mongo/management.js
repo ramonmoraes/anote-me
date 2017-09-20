@@ -1,13 +1,20 @@
-var MongoID = require('mongodb').ObjectID;
+const MongoID = require('mongodb').ObjectID;
+const dbConnect = require('./connect.js');
+
+
+const db = dbConnect.then( (res)=> {
+  return res;
+});
 
 function dropId(file){
   delete file["_id"];
   return file
 }
 
+
 module.exports ={
 
- insertOneDoc : function(db, file, collectionName) {
+ insertOneDoc : function(file, collectionName) {
   // Get the documents collection
   const collection = db.collection(collectionName);
 
@@ -18,7 +25,7 @@ module.exports ={
 },
 
 
-  insertManyDocs : function(db, files, collectionName){
+  insertManyDocs : function(files, collectionName){
     const collection = db.collection(collectionName);
 
     collection.insertMany(files, function(err, result) {
@@ -28,7 +35,7 @@ module.exports ={
   },
 
 
-  updateOneDoc : function(db, file,collectionName){
+  updateOneDoc : function(file,collectionName){
     const collection = db.collection(collectionName);
     let id = MongoID(file._id);
 
@@ -39,7 +46,7 @@ module.exports ={
   },
 
 
-  findOne : function(db, id, collectionName){ // Find One não ficara neste js File
+  findOne : function(id, collectionName){ // Find One não ficara neste js File
     const collection = db.collection(collectionName);
 
     collection.findOne({_id:MongoID(id)}, function(err, res){
